@@ -21,6 +21,11 @@ ui <- fluidPage(
    # Sidebar with a slider input for number of bins 
     sidebarLayout(
         sidebarPanel(
+        checkboxInput("flips", 
+                    "Multiple variables: Flip color and line style?", 
+                    value = FALSE, 
+                    width = NULL),
+        
         sliderInput("years",
                      "Years:",
                      min = 1900,
@@ -180,6 +185,11 @@ server <- function(input, output) {
            vars <- divs$var[which(divs$len > 1)]
            plot_color <- vars[1]
            plot_line <- vars[2]
+           
+           if (input$flips == TRUE){
+               plot_color <- vars[2]
+               plot_line <- vars[1]
+           }
            
            df %>%
                ggplot(aes(x=Year, y=Rate, 
