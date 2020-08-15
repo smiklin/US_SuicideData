@@ -5,9 +5,9 @@ account: smiklin
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 2635632
-bundleId: 3466760
+bundleId: 3518024
 url: https://smiklin.shinyapps.io/us_suicidedata/
-when: 1596406651.42524
+when: 1597450006.00729
 asMultiple: FALSE
 asStatic: FALSE
-ignoredFiles: README.md|CDC Historical Data
+ignoredFiles: .RData|README.md
