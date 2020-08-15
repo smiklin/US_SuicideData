@@ -311,7 +311,9 @@ server <- function(input, output) {
                                  option = "D",
                                  aesthetics = "fill")+
             facet_wrap(~year)+
-            theme(legend.position = "bottom", legend.justification = "center")
+            labs(caption = "Source: CDC National Vital Statistics Data") +
+            theme(text = element_text(family="Avenir", color="#008080"),
+                  legend.position = "right", legend.justification = "center")
         
     })
 }
